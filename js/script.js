@@ -6,6 +6,7 @@
       } else {
           document.getElementById("welcome-message").innerText = "Guest";
       }
+          
   }
 
 // INPUT FORM
@@ -31,3 +32,19 @@
         welcomeMessage();
         addFormListeners();
     };
+
+    // Toggle menu di mobile dengan animasi
+const btn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
+
+btn.addEventListener("click", () => {
+    if (menu.classList.contains("hidden")) {
+        menu.classList.remove("hidden");
+        menu.classList.add("scale-y-100", "opacity-100");
+        menu.classList.remove("scale-y-0", "opacity-0");
+    } else {
+        menu.classList.add("scale-y-0", "opacity-0");
+        menu.classList.remove("scale-y-100", "opacity-100");
+        setTimeout(() => menu.classList.add("hidden"), 300); // delay sesuai duration-300
+    }
+});
