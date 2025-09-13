@@ -4,7 +4,7 @@
       if (messages && messages.trim() !== "") {
           document.getElementById("welcome-message").innerText = messages;
       } else {
-          document.getElementById("welcome-message").innerText = "Guest";
+          document.getElementById("welcome-message").innerText = "Friend";
       }
           
   }
